@@ -8,20 +8,20 @@ namespace leer_trabajadores
 	class MainClass
 	{
 		public static void Main (string[] args)
-		{
-			int sueldo, edad, mayor=0, menor=0;
+		{       // aqui se inicializan las variables
+			int Sueldo, edad, Mayor=0, menor=0;
 			string nombre="1", sueldoM="", sueldoMe="";
 			StreamReader r;
 			r new StreamReader ("/home/luis/a2.txt");
-
+			//aqui se hace un ciclo y lee el documento hasta que se mande false 
 			while (r.EndOfStream==false) 
 			{
 
 				nombre = r.ReadLine ();
 				edad = Convert.ToInt32 (r.ReadLine ());
 				sueldo = Convert.ToInt32 (r.ReadLine ());
-
-				if (sueldo > mayor) 
+				
+				if (Sueldo > Mayor) 
 				{
 					mayor = sueldo;
 					sueldoM = nombre;

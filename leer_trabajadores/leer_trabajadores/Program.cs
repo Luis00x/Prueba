@@ -9,8 +9,8 @@ namespace leer_trabajadores
 	{
 		public static void Main (string[] args)
 		{
-			int sueldo, edad, mayor=0;
-			string nombre="1", sueldoM="";
+			int sueldo, edad, mayor=0, menor=0;
+			string nombre="1", sueldoM="", sueldoMe="";
 			StreamReader r = new StreamReader ("/home/luis/a2.txt");
 
 			while (r.EndOfStream==false) 
@@ -24,6 +24,21 @@ namespace leer_trabajadores
 				{
 					mayor = sueldo;
 					sueldoM = nombre;
+				}
+			}
+			Console.WriteLine ("el de mayor sueldo es: " + sueldoM);
+			
+			while (r.EndOfStream==false) 
+			{
+
+				nombre = r.ReadLine ();
+				edad = Convert.ToInt32 (r.ReadLine ());
+				sueldo = Convert.ToInt32 (r.ReadLine ());
+
+				if (sueldo < menor) 
+				{
+					menor = sueldo;
+					sueldoMe = nombre;
 				}
 			}
 			Console.WriteLine ("el de mayor sueldo es: " + sueldoM);

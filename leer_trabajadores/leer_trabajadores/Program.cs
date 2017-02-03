@@ -11,7 +11,8 @@ namespace leer_trabajadores
 		{
 			int sueldo, edad, mayor=0, menor=0;
 			string nombre="1", sueldoM="", sueldoMe="";
-			StreamReader r = new StreamReader ("/home/luis/a2.txt");
+			StreamReader r;
+			r new StreamReader ("/home/luis/a2.txt");
 
 			while (r.EndOfStream==false) 
 			{
@@ -26,7 +27,7 @@ namespace leer_trabajadores
 					sueldoM = nombre;
 				}
 			}
-			Console.WriteLine ("el de mayor sueldo es: " + sueldoM);
+			Console.WriteLine ("El de mayor sueldo es: " + sueldoM);
 			
 			while (r.EndOfStream==false) 
 			{
@@ -41,18 +42,9 @@ namespace leer_trabajadores
 					sueldoMe = nombre;
 				}
 			}
-			Console.WriteLine ("el de mayor sueldo es: " + sueldoM);
+			Console.WriteLine ("El trabajdor con mayor sueldo ganado: " + sueldoM);
 			r.Close ();
-			/*StreamWriter x = File.AppendText ("/home/luis/edades.txt");
-			StreamReader s = new StreamReader ("/home/luis/edades.txt");
-			while (s.EndOfStream==false) 
-			{
-
-				nombre = s.ReadLine ();
-				edad = Convert.ToInt32 (s.ReadLine ());
-				sueldo = Convert.ToInt32 (s.ReadLine ());
-
-			}*/
+			
 		}
 	}
 }
